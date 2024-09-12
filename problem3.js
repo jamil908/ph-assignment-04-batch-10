@@ -4,22 +4,26 @@
 
 
 function checkDigitsInName(name) {
-    if(Array.isArray(name)){
+   
+    if(typeof name !== 'string'){
         return 'Invalid Input'
     }
     let hasNumber =false
     for( let i = 0; i < name.length; i++){
-        if(!isNaN(name[i] && name[i] !== '')){
-            hasNumber=true
+        if(!isNaN(name[i] ) && name[i] !== ' '){
+            hasNumber = true
+            break
+            
         }
+        
     }
-    if(typeof name === 'string'&& name === hasNumber ){
-        return true
-    }else{
-        return false
-    }
+    return hasNumber
+    
+   
 }
 
 
-console.log(checkDigitsInName('!@#'))
+console.log(checkDigitsInName( ["Raj"]
+
+))
  
